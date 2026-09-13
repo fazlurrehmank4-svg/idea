@@ -19,7 +19,7 @@ export function AdSlot({
   style,
   className = "",
   minHeight = "120px",
-  client = "ca-pub-XXXXXXXXXXXXXXXX",
+  client = "ca-pub-6347449521344114",
 }: AdSlotProps) {
   const adRef = useRef<HTMLModElement>(null);
   const [isVisible, setIsVisible] = useState(false);
