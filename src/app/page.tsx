@@ -36,7 +36,7 @@ export default function HomePage() {
             className="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-lg p-4 text-white font-semibold transition-all duration-300 hover:shadow-lg group"
           >
             <div className="flex items-center justify-between">
-              <span>Discover More Resources → Click Here</span>
+              <span>Click Here</span>
               <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </a>
