@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Sparkles, Flame, ArrowRight, Dices, Search, Layers, Compass } from "lucide-react";
+import { Sparkles, Flame, ArrowRight, Dices, Search, Layers, Compass, ExternalLink } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SearchBar } from "@/components/SearchBar";
@@ -27,10 +27,26 @@ export default function HomePage() {
           <AdSlot slot="1000000001" minHeight="90px" />
         </div>
 
+        {/* Promotional Banner Ad */}
+        <div className="max-w-7xl mx-auto px-4 pt-4 pb-2">
+          <a
+            href="https://omg10.com/4/11548346"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-lg p-4 text-white font-semibold transition-all duration-300 hover:shadow-lg group"
+          >
+            <div className="flex items-center justify-between">
+              <span>Discover More Resources → Click Here</span>
+              <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </div>
+          </a>
+        </div>
+
         {/* Hero Section */}
         <section className="relative overflow-hidden py-16 lg:py-24">
           {/* Animated Ambient Blobs */}
           <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-r from-indigo-500/20 to-amber-500/20 blur-3xl rounded-full pointer-events-none animate-blob" />
+          <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-l from-purple-500/20 to-indigo-500/20 blur-3xl rounded-full pointer-events-none animate-blob animation-delay-2000" />
 
           <div className="max-w-5xl mx-auto px-4 text-center relative z-10 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 text-xs font-semibold">
