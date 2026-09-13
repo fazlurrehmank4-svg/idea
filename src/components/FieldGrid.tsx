@@ -15,6 +15,7 @@ import {
   Sprout,
   School,
   Zap,
+  Landmark,
   ArrowRight,
 } from "lucide-react";
 
@@ -30,6 +31,7 @@ export const CATEGORY_ICONS: Record<
   "Pure Sciences": { icon: Atom, color: "text-cyan-500 bg-cyan-500/10 border-cyan-500/20", count: 100 },
   "Social Sciences": { icon: Users2, color: "text-emerald-500 bg-emerald-500/10 border-emerald-500/20", count: 70 },
   "Arts & Humanities": { icon: Palette, color: "text-pink-500 bg-pink-500/10 border-pink-500/20", count: 60 },
+  "Heritage & Culture": { icon: Landmark, color: "text-amber-600 bg-amber-600/10 border-amber-600/20", count: 50 },
   "Education": { icon: GraduationCap, color: "text-orange-500 bg-orange-500/10 border-orange-500/20", count: 50 },
   "Agriculture & Environment": { icon: Sprout, color: "text-green-500 bg-green-500/10 border-green-500/20", count: 50 },
   "School-Level Projects": { icon: School, color: "text-teal-500 bg-teal-500/10 border-teal-500/20", count: 100 },
