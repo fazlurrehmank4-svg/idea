@@ -20,6 +20,7 @@ const FIELDS = [
   "Pure Sciences",
   "Social Sciences",
   "Arts & Humanities",
+  "Heritage & Culture",
   "Education",
   "Agriculture & Environment",
   "School-Level Projects",

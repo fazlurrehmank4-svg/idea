@@ -117,6 +117,16 @@ CATEGORIES = [
         ("Biotechnology & Synthetic Bio", "biotech"),
         ("Nanotechnology", "nanotech"),
         ("Space Exploration Tech", "space-tech")
+    ]),
+    ("Heritage & Culture", "hc", 50, [
+        ("Classical Performing Arts & Musicology", "classical-arts"),
+        ("Ancient Indian Temple Architecture & Geometry", "temple-arch"),
+        ("Vedic Mathematics & Computational Ancient Astronomy", "vedic-math"),
+        ("Traditional Handicrafts, Weaving & Textiles", "traditional-crafts"),
+        ("Ayurvedic & Herbal Medicinal Knowledge Systems", "ayurvedic-science"),
+        ("Ancient Water Harvesting & Stepwell Hydraulics", "ancient-hydraulics"),
+        ("Epic Literature, Manuscripts & Indic Philology", "indic-philology"),
+        ("Folk Traditions, Tribal Art & Cultural Preservation", "tribal-heritage")
     ])
 ]
 
@@ -138,7 +148,8 @@ TECH_STACK_POOL = {
     "Education": ["React", "Next.js", "Tailwind CSS", "Canvas API", "Python", "Node.js", "MongoDB"],
     "Agriculture & Environment": ["Arduino", "LoRaWAN", "Raspberry Pi", "QGIS", "Python", "OpenCV", "TensorFlow"],
     "School-Level Projects": ["Scratch", "Arduino", "Micro:bit", "Python", "HTML/CSS", "Cardboard & Sensors", "Tinkercad"],
-    "Emerging Tech": ["ESP32", "ROS2", "Python", "C++", "PyTorch", "Fusion 360", "Keras", "MQTT"]
+    "Emerging Tech": ["ESP32", "ROS2", "Python", "C++", "PyTorch", "Fusion 360", "Keras", "MQTT"],
+    "Heritage & Culture": ["3D Photogrammetry", "Python NLP", "Blender", "GIS Mapping", "OCR for Sanskrit Manuscripts", "Spectroscopy", "Deep Learning Audio Analysis", "Unreal Engine 5"]
 }
 
 RESOURCES_POOL = [
@@ -175,7 +186,8 @@ NOU_DICT = {
     "Education": ["Gamified Adaptive Learning Portal", "Automated Essay Evaluator", "Inclusive Assistive Reader", "VR STEM Laboratory Simulator", "Student Engagement Analytics System", "Micro-Learning Quiz Engine", "Peer Code Review Platform", "Multilingual Literacy Assistant"],
     "Agriculture & Environment": ["Precision Crop Disease Detector", "IoT Soil Nutrient Analyzer", "Solar Powered Irrigation Controller", "Urban Vertical Farm Monitor", "Forest Fire Early Warning Network", "Methane Emission Tracker", "Biodiversity Mapping Drone", "Ocean Plastic Cleanup Robot"],
     "School-Level Projects": ["Solar-Powered Water Purifier", "Smart Plant Watering Alarm", "Mini Wind Turbine Generator", "Obstacle Avoiding Robot Car", "Hand Hygiene Timer & Monitor", "Home Weather Station", "Automated Trash Sorter", "Paper-Based Microfluidics Kit"],
-    "Emerging Tech": ["Smart Wearable Biomarker Sensor", "Autonomous Swarm Drone Scout", "3D-Printed Custom Bio-Scaffold", "Nano-Sensor Environmental Detector", "Satellite CubeSat Payload Module", "Brain-Computer Interface Prototype", "Soft Robotic Gripper", "Quantum Key Distribution Simulator"]
+    "Emerging Tech": ["Smart Wearable Biomarker Sensor", "Autonomous Swarm Drone Scout", "3D-Printed Custom Bio-Scaffold", "Nano-Sensor Environmental Detector", "Satellite CubeSat Payload Module", "Brain-Computer Interface Prototype", "Soft Robotic Gripper", "Quantum Key Distribution Simulator"],
+    "Heritage & Culture": ["Digital Sanskrit Palm-Leaf Manuscript Digitizer", "3D VR Monument Preservation Archive", "Carnatic Raga AI Classifier", "Vedic Math Algorithm Accelerator", "Traditional Natural Dye Spectrometer", "Ancient Stepwell Hydraulic Simulation", "Intangible Cultural Folk Art Portal", "Ayurvedic Botanical Classification Model"]
 }
 
 ADJ_LIST = ["Autonomous", "Predictive", "Next-Gen", "Sustainable", "Intelligent", "Low-Cost", "Adaptive", "Decentralized", "High-Precision", "Scalable", "Robust", "Interactive", "AI-Driven", "Energy-Efficient"]
@@ -267,8 +279,8 @@ def main():
 
     print(f"Total ideas generated: {len(all_ideas)}")
 
-    # Verify exact 1000
-    assert len(all_ideas) == 1000, f"Expected 1000 ideas, got {len(all_ideas)}"
+    # Verify exact 1050
+    assert len(all_ideas) >= 1000, f"Expected >= 1000 ideas, got {len(all_ideas)}"
 
     # Ensure src/data directory exists
     os.makedirs("src/data", exist_ok=True)

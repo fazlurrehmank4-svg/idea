@@ -125,6 +125,7 @@ export default function SubmitPage() {
                   <option value="Pure Sciences">Pure Sciences</option>
                   <option value="Social Sciences">Social Sciences</option>
                   <option value="Arts & Humanities">Arts & Humanities</option>
+                  <option value="Heritage & Culture">Heritage & Culture</option>
                   <option value="Education">Education</option>
                   <option value="Agriculture & Environment">Agriculture & Environment</option>
                   <option value="School-Level Projects">School-Level Projects</option>
