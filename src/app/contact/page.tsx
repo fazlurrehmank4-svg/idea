@@ -14,7 +14,7 @@ export default function ContactPage() {
             Get in Touch
           </h1>
           <p className="text-xs sm:text-sm text-slate-500">
-            Questions, partnerships, or feedback about IdeaVerse 1000? We'd love to hear from you.
+            Questions, partnerships, or feedback about IdeaVerse 1000? We&apos;d love to hear from you.
           </p>
         </div>
 

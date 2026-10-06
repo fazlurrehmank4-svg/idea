@@ -19,7 +19,7 @@ export default function AboutPage() {
             Democratizing Research & Project Discovery
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 max-w-xl mx-auto leading-relaxed">
-            IdeaVerse 1000 was built to solve the age-old problem every student, researcher, and engineer faces: "What project should I build next?"
+            IdeaVerse 1000 was built to solve the age-old problem every student, researcher, and engineer faces: &quot;What project should I build next?&quot;
           </p>
         </div>
 

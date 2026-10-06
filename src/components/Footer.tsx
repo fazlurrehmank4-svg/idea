@@ -24,7 +24,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
-              "1000 Project Ideas. Every Field. Every Level. One Platform." Discover, bookmark, and execute high-impact research and build topics tailored to your exact needs.
+              &quot;1000 Project Ideas. Every Field. Every Level. One Platform.&quot; Discover, bookmark, and execute high-impact research and build topics tailored to your exact needs.
             </p>
             <p className="text-xs text-slate-400 dark:text-slate-500 flex items-center gap-1">
               Crafted with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> for creators worldwide.

@@ -205,8 +205,8 @@ export default function IdeaDetailPage({ params }: { params: { id: string } }) {
           </ul>
         </div>
 
-        {/* AdSlot After Objectives */}
-        <AdSlot slot="3000000001" minHeight="120px" />
+        {/* AdSlot After Objectives (Disabled)
+        <AdSlot slot="3000000001" minHeight="120px" /> */}
 
         {/* Tech Stack & Resources */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -250,8 +250,8 @@ export default function IdeaDetailPage({ params }: { params: { id: string } }) {
           </div>
         </div>
 
-        {/* AdSlot Before Similar Ideas */}
-        <AdSlot slot="3000000002" minHeight="120px" />
+        {/* AdSense Matched Content Unit (autorelaxed) */}
+        <AdSlot slot="5640277782" format="autorelaxed" minHeight="200px" />
 
         {/* Similar Ideas Recommendation */}
         {similarIdeas.length > 0 && (

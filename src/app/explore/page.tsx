@@ -88,10 +88,10 @@ function ExploreContent() {
           {/* Sidebar */}
           <div className="space-y-6">
             <FilterBar />
-            {/* Sidebar Ad for Desktop */}
+            {/* Sidebar Ad for Desktop (Disabled)
             <div className="hidden lg:block w-72">
               <AdSlot slot="2000000001" format="vertical" minHeight="300px" />
-            </div>
+            </div> */}
           </div>
 
           {/* Ideas Grid Feed */}
@@ -113,12 +113,12 @@ function ExploreContent() {
                 {paginatedIdeas.map((idea, index) => (
                   <React.Fragment key={idea.id}>
                     <IdeaCard idea={idea} />
-                    {/* In-feed ad every 12 cards */}
-                    {(index + 1) % 12 === 0 && (
+                    {/* In-feed ad every 12 cards (Disabled)
+                    (index + 1) % 12 === 0 && (
                       <div className="col-span-1 md:col-span-2 xl:col-span-3">
                         <AdSlot slot={`200000000${index}`} minHeight="120px" />
                       </div>
-                    )}
+                    ) */}
                   </React.Fragment>
                 ))}
               </div>

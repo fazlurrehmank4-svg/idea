@@ -21,9 +21,9 @@ export default function HomePage() {
       <Header />
 
       <main className="flex-1">
-        {/* AdSlot Leaderboard Top */}
+        {/* Ad Unit 2 (Active AdSense Slot) */}
         <div className="max-w-7xl mx-auto px-4 pt-4">
-          <AdSlot slot="1000000001" minHeight="90px" />
+          <AdSlot slot="9555472062" minHeight="90px" />
         </div>
 
         {/* Promotional Banner Ad */}
@@ -110,10 +110,10 @@ export default function HomePage() {
           <FieldGrid />
         </section>
 
-        {/* AdSlot In-Feed Mid-Grid */}
+        {/* AdSlot In-Feed Mid-Grid (Disabled)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AdSlot slot="1000000002" minHeight="120px" />
-        </div>
+        </div> */}
 
         {/* Trending Ideas */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -165,10 +165,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* AdSlot Footer */}
+        {/* AdSlot Footer (Disabled)
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
           <AdSlot slot="1000000003" minHeight="150px" />
-        </div>
+        </div> */}
       </main>
 
       <Footer />
