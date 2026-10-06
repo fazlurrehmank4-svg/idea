@@ -13,13 +13,13 @@ interface AdSlotProps {
 }
 
 export function AdSlot({
-  slot = "1234567890",
+  slot = "6536758182",
   format = "auto",
   layout,
   style,
   className = "",
   minHeight = "120px",
-  client = "ca-pub-XXXXXXXXXXXXXXXX",
+  client = "ca-pub-6347449521344114",
 }: AdSlotProps) {
   const adRef = useRef<HTMLModElement>(null);
   const [isVisible, setIsVisible] = useState(false);
