@@ -36,6 +36,9 @@ export const metadata: Metadata = {
     description: "1000 Project Ideas. Every Field. Every Level.",
     type: "website",
   },
+  other: {
+    "google-adsense-account": "ca-pub-6347449521344114",
+  },
 };
 
 export const viewport: Viewport = {
@@ -116,6 +119,9 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Google AdSense Site Verification Meta Tag */}
+        <meta name="google-adsense-account" content="ca-pub-6347449521344114" />
+
         {/* Google AdSense: Using native script tag to prevent Next.js data-nscript attribute */}
         <script
           async
