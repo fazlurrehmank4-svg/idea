@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ConsentBanner } from "@/components/ads/ConsentBanner";
 import "./globals.css";
 
 const inter = Inter({
@@ -85,6 +86,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <ConsentBanner />
         </ThemeProvider>
       </body>
     </html>
