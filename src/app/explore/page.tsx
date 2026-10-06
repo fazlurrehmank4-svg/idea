@@ -7,9 +7,7 @@ import { Footer } from "@/components/Footer";
 import { SearchBar } from "@/components/SearchBar";
 import { FilterBar } from "@/components/FilterBar";
 import { IdeaCard } from "@/components/IdeaCard";
-import { AdSlot } from "@/components/ads/AdSlot";
 import { InstallPrompt } from "@/components/pwa/InstallPrompt";
-import { ConsentBanner } from "@/components/ads/ConsentBanner";
 import { SurpriseMeModal } from "@/components/SurpriseMeModal";
 import { searchIdeas } from "@/lib/fuse";
 import { useAppStore } from "@/lib/store";
@@ -83,15 +81,11 @@ function ExploreContent() {
           <SearchBar />
         </div>
 
-        {/* Layout with Sidebar Ad & Filter Bar */}
+        {/* Layout with Sidebar & Filter Bar */}
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Sidebar */}
           <div className="space-y-6">
             <FilterBar />
-            {/* Sidebar Ad for Desktop */}
-            <div className="hidden lg:block w-72">
-              <AdSlot slot="2000000001" format="vertical" minHeight="300px" />
-            </div>
           </div>
 
           {/* Ideas Grid Feed */}
@@ -110,16 +104,8 @@ function ExploreContent() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-                {paginatedIdeas.map((idea, index) => (
-                  <React.Fragment key={idea.id}>
-                    <IdeaCard idea={idea} />
-                    {/* In-feed ad every 12 cards */}
-                    {(index + 1) % 12 === 0 && (
-                      <div className="col-span-1 md:col-span-2 xl:col-span-3">
-                        <AdSlot slot={`200000000${index}`} minHeight="120px" />
-                      </div>
-                    )}
-                  </React.Fragment>
+                {paginatedIdeas.map((idea) => (
+                  <IdeaCard key={idea.id} idea={idea} />
                 ))}
               </div>
             )}
@@ -141,7 +127,6 @@ function ExploreContent() {
 
       <Footer />
       <InstallPrompt />
-      <ConsentBanner />
       <SurpriseMeModal />
     </div>
   );

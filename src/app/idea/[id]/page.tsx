@@ -23,9 +23,7 @@ import {
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { IdeaCard } from "@/components/IdeaCard";
-import { AdSlot } from "@/components/ads/AdSlot";
 import { InstallPrompt } from "@/components/pwa/InstallPrompt";
-import { ConsentBanner } from "@/components/ads/ConsentBanner";
 import { SurpriseMeModal } from "@/components/SurpriseMeModal";
 import { getIdeaById, getSimilarIdeas } from "@/lib/fuse";
 import { useAppStore } from "@/lib/store";
@@ -205,9 +203,6 @@ export default function IdeaDetailPage({ params }: { params: { id: string } }) {
           </ul>
         </div>
 
-        {/* AdSlot After Objectives */}
-        <AdSlot slot="3000000001" minHeight="120px" />
-
         {/* Tech Stack & Resources */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800/80 rounded-3xl p-6 shadow-sm space-y-4">
@@ -250,9 +245,6 @@ export default function IdeaDetailPage({ params }: { params: { id: string } }) {
           </div>
         </div>
 
-        {/* AdSlot Before Similar Ideas */}
-        <AdSlot slot="3000000002" minHeight="120px" />
-
         {/* Similar Ideas Recommendation */}
         {similarIdeas.length > 0 && (
           <div className="space-y-6 pt-4">
@@ -271,7 +263,6 @@ export default function IdeaDetailPage({ params }: { params: { id: string } }) {
 
       <Footer />
       <InstallPrompt />
-      <ConsentBanner />
       <SurpriseMeModal />
     </div>
   );

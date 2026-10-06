@@ -5,9 +5,8 @@ import confetti from "canvas-confetti";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { InstallPrompt } from "@/components/pwa/InstallPrompt";
-import { ConsentBanner } from "@/components/ads/ConsentBanner";
 import { SurpriseMeModal } from "@/components/SurpriseMeModal";
-import { PlusCircle, CheckCircle2, Send, Sparkles } from "lucide-react";
+import { CheckCircle2, Send, Sparkles } from "lucide-react";
 
 export default function SubmitPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -221,7 +220,6 @@ export default function SubmitPage() {
 
       <Footer />
       <InstallPrompt />
-      <ConsentBanner />
       <SurpriseMeModal />
     </div>
   );

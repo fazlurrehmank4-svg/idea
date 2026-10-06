@@ -7,12 +7,11 @@ import { Footer } from "@/components/Footer";
 import { IdeaCard } from "@/components/IdeaCard";
 import { SearchBar } from "@/components/SearchBar";
 import { InstallPrompt } from "@/components/pwa/InstallPrompt";
-import { ConsentBanner } from "@/components/ads/ConsentBanner";
 import { SurpriseMeModal } from "@/components/SurpriseMeModal";
 import { useAppStore } from "@/lib/store";
 import ideasData from "@/data/ideas.json";
 import { Idea } from "@/types/idea";
-import { Bookmark, Trash2, Download, Upload, Compass } from "lucide-react";
+import { Bookmark, Trash2, Download, Compass } from "lucide-react";
 
 const allIdeas = ideasData as Idea[];
 
@@ -132,7 +131,6 @@ export default function SavedPage() {
 
       <Footer />
       <InstallPrompt />
-      <ConsentBanner />
       <SurpriseMeModal />
     </div>
   );

@@ -5,7 +5,6 @@ import { Footer } from "@/components/Footer";
 import { SearchBar } from "@/components/SearchBar";
 import { FieldGrid } from "@/components/FieldGrid";
 import { IdeaCard } from "@/components/IdeaCard";
-import { AdSlot } from "@/components/ads/AdSlot";
 import { InstallPrompt } from "@/components/pwa/InstallPrompt";
 import { SurpriseMeModal } from "@/components/SurpriseMeModal";
 import ideasData from "@/data/ideas.json";
@@ -21,11 +20,6 @@ export default function HomePage() {
       <Header />
 
       <main className="flex-1">
-        {/* AdSlot Leaderboard Top */}
-        <div className="max-w-7xl mx-auto px-4 pt-4">
-          <AdSlot slot="1000000001" minHeight="90px" />
-        </div>
-
         {/* Hero Section */}
         <section className="relative overflow-hidden py-16 lg:py-24">
           {/* Animated Ambient Blobs */}
@@ -94,11 +88,6 @@ export default function HomePage() {
           <FieldGrid />
         </section>
 
-        {/* AdSlot In-Feed Mid-Grid */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AdSlot slot="1000000002" minHeight="120px" />
-        </div>
-
         {/* Trending Ideas */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex items-center justify-between mb-8">
@@ -148,11 +137,6 @@ export default function HomePage() {
             ))}
           </div>
         </section>
-
-        {/* AdSlot Footer */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-          <AdSlot slot="1000000003" minHeight="150px" />
-        </div>
       </main>
 
       <Footer />

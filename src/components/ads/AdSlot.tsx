@@ -13,7 +13,7 @@ interface AdSlotProps {
 }
 
 export function AdSlot({
-  slot = "6536758182",
+  slot = "1234567890",
   format = "auto",
   layout,
   style,
