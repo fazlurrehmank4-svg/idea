@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { ConsentBanner } from "@/components/ads/ConsentBanner";
 import "./globals.css";
 
 const inter = Inter({
@@ -60,9 +61,61 @@ export default function RootLayout({
     }
   };
 
+  const consentInitInlineScript = `
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500
+    });
+
+    (function () {
+      try {
+        var saved = JSON.parse(localStorage.getItem('cookie_consent_v2') || 'null');
+        if (!saved) return;
+
+        gtag('consent', 'update', {
+          ad_storage: saved.ad_storage ? 'granted' : 'denied',
+          ad_user_data: saved.ad_user_data ? 'granted' : 'denied',
+          ad_personalization: saved.ad_personalization ? 'granted' : 'denied',
+          analytics_storage: saved.analytics_storage ? 'granted' : 'denied'
+        });
+      } catch (e) {}
+    })();
+  `;
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <Script
+          id="google-consent-mode-default"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: consentInitInlineScript }}
+        />
+        <Script
+          id="google-analytics"
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="google-analytics-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-XXXXXXXXXX');
+            `,
+          }}
+        />
         <Script
           id="google-adsense"
           async
@@ -85,6 +138,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <ConsentBanner />
         </ThemeProvider>
       </body>
     </html>
