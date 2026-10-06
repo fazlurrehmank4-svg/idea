@@ -165,10 +165,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* AdSlot Footer (Disabled)
+        {/* AdSlot Footer */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-          <AdSlot slot="1000000003" minHeight="150px" />
-        </div> */}
+          <AdSlot slot="6536758182" minHeight="120px" />
+        </div>
       </main>
 
       <Footer />
