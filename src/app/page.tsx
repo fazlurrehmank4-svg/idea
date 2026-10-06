@@ -7,7 +7,6 @@ import { FieldGrid } from "@/components/FieldGrid";
 import { IdeaCard } from "@/components/IdeaCard";
 import { AdSlot } from "@/components/ads/AdSlot";
 import { InstallPrompt } from "@/components/pwa/InstallPrompt";
-import { ConsentBanner } from "@/components/ads/ConsentBanner";
 import { SurpriseMeModal } from "@/components/SurpriseMeModal";
 import ideasData from "@/data/ideas.json";
 import { Idea } from "@/types/idea";
@@ -158,7 +157,6 @@ export default function HomePage() {
 
       <Footer />
       <InstallPrompt />
-      <ConsentBanner />
       <SurpriseMeModal />
     </div>
   );

@@ -1,7 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { Sparkles, Heart } from "lucide-react";
 
 export function Footer() {
+  const handleOpenPreferences = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.dispatchEvent(new CustomEvent("open-cookie-preferences"));
+  };
+
   return (
     <footer className="border-t border-slate-200 dark:border-slate-800/80 bg-slate-50 dark:bg-slate-950/60 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -68,6 +75,16 @@ export function Footer() {
                 <Link href="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                   Terms of Service
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  id="open-cookie-preferences"
+                  onClick={handleOpenPreferences}
+                  className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors cursor-pointer"
+                >
+                  Privacy & Cookie Preferences
+                </a>
               </li>
               <li>
                 <Link href="/contact" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
